@@ -36,7 +36,7 @@ public final class ArabicRomanNumberConverter {
             case 5 -> "V";
             case 6, 7, 8 -> String.format("V%s", "I".repeat(onesNumber - 5));
             case 9 -> "IX";
-            default -> throw new IllegalArgumentException();
+            default -> throw new Exception();
         };
 
         final var prefix = switch (tensNumber) {
@@ -47,7 +47,7 @@ public final class ArabicRomanNumberConverter {
             case 6, 7, 8 -> String.format("L%s", "X".repeat(tensNumber - 5));
             case 9 -> "XC";
             case 10 -> "C";
-            default -> throw new IllegalArgumentException();
+            default -> throw new Exception();
         };
 
         return prefix + result;

@@ -1,6 +1,7 @@
 package ru.shelest;
 
 import ru.shelest.calculator.Calculator;
+import ru.shelest.parser.ArabicRomanNumberConverter;
 
 import java.util.Scanner;
 

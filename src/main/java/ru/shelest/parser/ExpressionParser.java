@@ -88,16 +88,16 @@ public final class ExpressionParser {
             return new Operand(ArabicRomanNumberConverter.romanToArabic(input), OperandType.ROMAN);
         }
 
-        throw new IllegalArgumentException();
+        throw new Exception();
     }
 
-    private static Operator getOperator(final String input) {
+    private static Operator getOperator(final String input) throws Exception {
         return switch (input) {
             case "+" -> new AddOperator();
             case "-" -> new SubtractionOperator();
             case "*" -> new MultiplicationOperator();
             case "/" -> new DivisionOperator();
-            default -> throw new IllegalArgumentException();
+            default -> throw new Exception();
         };
     }
 }

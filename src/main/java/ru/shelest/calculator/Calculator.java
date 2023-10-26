@@ -19,7 +19,7 @@ public class Calculator {
         final int result = operator.accept(operand1, operand2);
 
         if (operation.getType().equals(OperationType.ROMAN)) {
-            require(result > 0, IllegalArgumentException::new);
+            require(result > 0, Exception::new);
 
             return ArabicRomanNumberConverter.arabicToRoman(result);
         }
